@@ -8,7 +8,7 @@ opencv-python==4.5.1.48
 
 ## Usage
 
-Set the folder containing the images to `input_path`,
+Set the path of the folder containing the image (`input_path`)  and the output image size (`output_size`),
 ```
 $ python face_detect.py
 ```
