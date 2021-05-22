@@ -3,12 +3,12 @@ import cv2
 from tqdm import tqdm
 
 input_path = ""
-output_dir = 'faces/images'
+output_dir = '../faces/images/'
 output_size = (1024,1024)
 file_l = os.listdir(input_path)
 add = 60 # 切り抜き幅調整
 cnt = 0
-if not os.input_path.exists(output_dir):
+if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 classifier = cv2.CascadeClassifier('lbpcascade_animeface.xml')
@@ -42,7 +42,7 @@ for f in tqdm(file_l[:]):
 
 
         face_image = cv2.resize(face_image, output_size)
-        output_input_path = os.input_path.join(output_dir,'{0}-{1}.jpg'.format(i,f[:-5]))
+        output_input_path = os.path.join(output_dir,'{0}-{1}.jpg'.format(i,f[:-5]))
         cv2.imwrite(output_input_path,face_image)
         cnt += 1
 
